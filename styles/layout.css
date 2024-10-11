@@ -1,0 +1,46 @@
+#app {
+    
+
+    display: grid;
+    grid-template-columns: 32.79% 67.21%;
+    gap: 1.25rem;
+    margin: 1.25rem;
+
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    overflow: auto;
+    
+    & .main-container {
+        margin-right: auto;
+    }
+    
+}
+
+aside {
+    
+    margin-left: auto;
+
+    position: relative;
+    
+    & header {
+        position: absolute;
+        width: 21rem;
+        margin: 2rem;
+        /* left: 50%;
+        transform: translateX(-50%); */   
+    }
+
+    h1 {
+        font: var(--font-family-logo);
+        color: var(--pink);
+    }
+
+    p {
+        font: var(--body-md);
+        color: var(--text-heading);
+    }
+
+}
