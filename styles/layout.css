@@ -12,9 +12,14 @@
 
 main {
     overflow: auto;
-    
+    display: grid;
+
     & .main-container {
-        margin-right: auto;
+        margin: 0 auto;
+        & h1 {
+            font: 700 1.75rem/normal var(--baloo-2);
+            color: var(--text-heading);
+        }
     }
     
 }

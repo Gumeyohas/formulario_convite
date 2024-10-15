@@ -34,35 +34,43 @@
                         </legend>
                     
                         <div class="input-wrapper">
-                            <div class="input-inner">
+                            <div class="input-inner ">
                                 <label for="title">Título</label>
                                 <input type="text" name="title" id="title" placeholder="Nome do evento">
                             </div>
-                            <div class="input-inner">
-                                <label for="start-date">Início</label>
-                                <input type="date" name="start-date" id="start-date">
-                            </div>
-    
-                            <div class="input-inner">
-                                <label for="final-date">Fim</label>
-                                <input type="date" name="final-date" id="final-date">
-                            </div>
-    
-                            <div class="input-inner">
-                                <label>Tipo</label>
-                                <div class="radio-wrapper">
-                                    <input type="radio" name="job-shift" id="in-person" value="in-person">
-                                    <img src="./assets/icons/building-default.svg" alt="Ícone de um prédio">
-                                    <label for="in-person">Presencial</label>
+                            <div class="input-wrapper-data">
+                                <div class="input-inner ">
+                                    <label for="start-date">Início</label>
+                                    <input type="date" name="start-date" id="start-date">
                                 </div>
-                                <div class="radio-wrapper">
-                                    <input type="radio" name="job-shift" id="online" value="online">
-                                    <img src="./assets/icons/video-default.svg" alt="Ícone de uma câmera de vídeo">
-                                    <label for="online">Online</label>
+        
+                                <div class="input-inner ">
+                                    <label for="final-date">Fim</label>
+                                    <input type="date" name="final-date" id="final-date">
                                 </div>
                             </div>
+                            
+                            <div class="input-wrapper-type-address">
+                                <div class="input-inner ">
+                                    <label>Tipo</label>
+                                    <div class="radio-wrapper">
+                                        <input type="radio" name="job-shift" id="in-person" value="in-person">
+                                        <img src="./assets/icons/building-default.svg" alt="Ícone de um prédio">
+                                        <label for="in-person">Presencial</label>
+                                    </div>
+                                    <div class="radio-wrapper">
+                                        <input type="radio" name="job-shift" id="online" value="online">
+                                        <img src="./assets/icons/video-default.svg" alt="Ícone de uma câmera de vídeo">
+                                        <label for="online">Online</label>
+                                    </div>
+                                    <div class="input-wrapper">
+                                        <label for="address">Local</label>
+                                        <input type="text" name="address" id="address" placeholder="Link ou endereço">
+                                    </div>
+                                </div>
+                            </div>
     
-                            <div class="input-inner">
+                            <div class="input-inner ">
                                 <div class="textarea-wrapper">
                                     <label for="description">Descrição</label>
                                     <textarea name="description" id="description" cols="30" rows="5" placeholder="Escreva sobre detalhes do evento"></textarea>

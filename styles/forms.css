@@ -1,0 +1,55 @@
+form {
+    width: 35rem;
+}
+
+fieldset {
+    border: none;
+}
+
+.input-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1rem;
+    margin-top: 1.625rem;
+    width: 100%;
+
+    & label {
+        font: 400 .875rem/normal var(--open-sans);
+        color: var(--text-body);
+    }
+
+    & input {
+        height: 3rem;
+        background-color: var(--input-base);
+        color: var(--input-placeholder);
+        font: 400 1rem/normal var(--open-sans);
+
+        border: 1px solid var(--input-stroke);
+        border-radius: 8px;
+        padding: 0 1rem;
+
+        appearance: none;
+    }
+}
+
+.input-wrapper-data {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
+
+.radio-wrapper {
+    display: flex;
+}
+
+legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+
+    color: var(--text-heading);
+    font: 700 1.125rem/1.25rem var(--baloo-2);
+}
