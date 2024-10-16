@@ -1,81 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formulário de Convite</title>
 
-    <link rel="stylesheet" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div id="app">
-        <aside>
-            <div class="aside-container">
-                <header>
-                    <img src="./assets/Party.svg" alt="Logo de um chapéu de festa">
-                    <h1>Festivite</h1>
-                    <p>Crie um convite digital para o seu evento</p>
-                </header>
-                <img src="./assets/illustration.svg" alt="Ilustração de um bolo de aniversário com uma vela em cima">
-            </div>
-        </aside>
-        <main>
-            <div class="main-container">
+      <aside>
+        <div class="aside-container">
+          <header>
+            <img src="./assets/Party.svg" alt="Logo de um chapéu de festa" />
+            <h1>Festivite</h1>
+            <p>Crie um convite digital para o seu evento</p>
+          </header>
+          <img
+            src="./assets/illustration.svg"
+            alt="Ilustração de um bolo de aniversário com uma vela em cima"
+          />
+        </div>
+      </aside>
+      <main>
+        <div class="main-container">
+          <h1>Crie seu convite</h1>
+          <form class="about">
+            <fieldset class="event-info">
+              <legend>
+                <img
+                  src="./assets/icons/calendar.svg"
+                  alt="Ícone de calendário"
+                />
+                Sobre o evento
+              </legend>
+              <div class="input-inner title">
+                <label for="title">Título</label>
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Nome do evento"
+                />
+              </div>
+              <div class="date-wrapper">
+                <div class="input-inner start">
+                  <label for="start-date">Início</label>
+                  <input type="date" name="start-date" id="start-date" />
+                </div>
 
-                <h1>Crie seu convite</h1>
-                <form class="about">
-                    <fieldset class="event-info">
-                        <legend>
-                            <img src="./assets/icons/calendar.svg" alt="Ícone de calendário">
-                            Sobre o evento
-                        </legend>
-                    
-                        <div class="input-wrapper">
-                            <div class="input-inner">
-                                <label for="title">Título</label>
-                                <input type="text" name="title" id="title" placeholder="Nome do evento">
-                            </div>
-                            <div class="input-inner">
-                                <label for="start-date">Início</label>
-                                <input type="date" name="start-date" id="start-date">
-                            </div>
-    
-                            <div class="input-inner">
-                                <label for="final-date">Fim</label>
-                                <input type="date" name="final-date" id="final-date">
-                            </div>
-    
-                            <div class="input-inner">
-                                <label>Tipo</label>
-                                <div class="radio-wrapper">
-                                    <input type="radio" name="job-shift" id="in-person" value="in-person">
-                                    <img src="./assets/icons/building-default.svg" alt="Ícone de um prédio">
-                                    <label for="in-person">Presencial</label>
-                                </div>
-                                <div class="radio-wrapper">
-                                    <input type="radio" name="job-shift" id="online" value="online">
-                                    <img src="./assets/icons/video-default.svg" alt="Ícone de uma câmera de vídeo">
-                                    <label for="online">Online</label>
-                                </div>
-                            </div>
-    
-                            <div class="input-inner">
-                                <div class="textarea-wrapper">
-                                    <label for="description">Descrição</label>
-                                    <textarea name="description" id="description" cols="30" rows="5" placeholder="Escreva sobre detalhes do evento"></textarea>
-                                </div>
-                            </div>
-    
-                        </div>
-    
-    
-                    </fieldset>
-                </form>
+                <div class="input-inner end">
+                  <label for="final-date">Fim</label>
+                  <input type="date" name="final-date" id="final-date" />
+                </div>
+              </div>
+              <div class="input-wrapper">
+                <div class="radio-wrapper">
+                  <label for="">Tipo</label>
+                  <div class="radio-inner">
+                    <div class="radio-button">
+                      <input
+                        type="radio"
+                        name="job-model"
+                        id="presencial"
+                        value="presencial"
+                      />
+                      <div class="radio-image presencial"></div>
+                      <label for="presencial">Presencial</label>
+                    </div>
+
+                    <div class="radio-button">
+                      <input
+                        type="radio"
+                        name="job-model"
+                        id="online"
+                        value="online"
+                      />
+                      <div class="radio-image online"></div>
+                      <label for="online">Online</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="address-wrapper">
+                  <label for="address">Local</label>
+                  <input type="text" placeholder="Link ou endereço" />
+                </div>
+              </div>
+
+              <div class="input-inner description">
+                <label for="description">Descrição</label>
+                <textarea
+                  name="description"
+                  id="description"
+                  cols="30"
+                  rows="5"
+                  placeholder="Escreva sobre detalhes do evento"
+                >
+                </textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="customization">
+              <legend>
+                <img
+                  src="./assets/icons/paintbrush-vertical.svg"
+                  alt=""
+                />Personalização
+              </legend>
+            </fieldset>
+
+            <label for="colors">Cor principal</label>
+            <div class="colors-wrapper">
+              <div class="input-collor">
+                <input type="radio" name="color" id="blue" />
+              </div>
+
+              <div class="input-collor">
+                <input type="radio" name="color" id="navy" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="purple" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="fuschia" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="pink" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="red" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="orange" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="yellow" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="lime" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="green" />
+              </div>
+              <div class="input-collor">
+                <input type="radio" name="color" id="cyan" />
+              </div>
             </div>
-        </main>
+          </form>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>

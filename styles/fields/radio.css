@@ -1,0 +1,70 @@
+.radio-wrapper,
+.address-wrapper {
+    width: 50%;
+}
+
+.radio-inner {
+    display: flex;
+    gap: .5rem;
+    border: 1px solid var(--input-stroke);
+    border-radius: .5rem;
+    padding: 0.5rem;
+}
+
+.radio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 50%;
+    padding: .4rem 1rem;
+    position: relative;
+
+    & input, 
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    &:hover, &:focus-within {
+        background-color: var(--shape-button);
+        color: var(--text-heading);
+        border-radius: .3rem;
+    }
+
+    &:has(:checked){
+        .radio-image {
+            &.presencial {
+                background-image: url("../../assets/icons/building-checked.svg");
+            }
+
+            &.online {
+                background-image: url("../../assets/icons/video-checked.svg");
+            }
+        }
+    }
+
+
+    .radio-image { 
+        width: 16px;
+        height: 16px;
+
+        &.presencial {
+            background-image: url("../../assets/icons/building-default.svg");
+        }
+
+        &.online {
+            background-image: url("../../assets/icons/video-default.svg");
+        }
+    }
+
+    label {
+        margin-bottom: 0;
+    }
+}
+
+.input-collor:has(:checked) {
+    border: 2px solid var(--brand-light);
+}

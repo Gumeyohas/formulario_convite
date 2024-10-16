@@ -1,0 +1,139 @@
+input, textarea {
+    appearance: none;
+    width: 100%;
+    border-radius: .5rem;
+    border: 1px solid var(--input-stroke);
+
+    padding: .813rem 1rem;
+    font: var(--body-md);
+    background-color: var(--shape-background);
+    color: var(--input-placeholder);  
+}
+
+label {
+    font: var(--body-sm);
+    color: var(--text-body);
+
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+input:focus,
+textarea:focus,
+input[type="date"]:focus-within { 
+    outline: none;
+    border: 1px solid var(--brand-light);
+    color: var(--text-heading);
+}
+
+input[type="date"] {
+    position: relative;
+    text-transform: uppercase;
+
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0.5rem;
+        
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: url("../../assets/icons/calendar.svg") center/contain;
+        right: 7.5rem;
+        width: 1.25rem;
+        height: 1.25rem;
+        /* alinhar elemento ao centro com posição absoluta */
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+input {
+    &:invalid {
+        border: 1px solid var(--danger);
+    }
+}
+
+
+.input-inner {
+    display: grid;
+    grid-template-rows: repeat(2, max-content);
+    margin-bottom: 1rem;
+}
+
+.date-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.input-wrapper {
+    display: flex;
+    gap: 1rem;
+}
+
+
+
+.colors-wrapper {
+    display: grid;
+    grid-template-columns: repeat(11, max-content);
+    justify-content: space-between;
+    gap: 12px;
+
+    & .input-collor {
+        display: grid;
+        background-color: var(--shape-button);
+        padding: 1px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+    }
+    
+    & input {
+        border-radius: 50%;
+        accent-color: transparent;
+    }
+    
+    & #blue {
+        background-color: var(--brand-light);
+    }
+
+    & #navy {
+        background-color: var(--navy);
+    }
+
+    & #purple {
+        background-color: var(--purple);
+    }
+
+    & #fuschia {
+        background-color: var(--fuschia);
+    }
+
+    & #pink {
+        background-color: var(--pink);
+    }
+
+    & #red {
+        background-color: var(--danger);
+    }
+
+    & #orange {
+        background-color: var(--orange);
+    }
+
+    & #yellow {
+        background-color: var(--yellow);
+    }
+
+    & #lime {
+        background-color: var(--lime);
+    }
+
+    & #green {
+        background-color: var(--green);
+    }
+
+    & #cyan {
+        background-color: var(--cyan);
+    }
+}
