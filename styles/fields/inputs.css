@@ -50,7 +50,9 @@ input[type="date"] {
 
 input {
     &:invalid {
+       
         border: 1px solid var(--danger);
+        
     }
 }
 
@@ -163,11 +165,14 @@ input {
     margin: .5rem 0;
     border-radius: .5rem;
     border: 2px solid var(--input-stroke);
+    padding: .25rem .25rem 0 .25rem;
+
     
+
     & label {
         margin-bottom: 0;
         text-align: center;
-        padding: .5rem;
+        padding: .5rem 0 .5rem 0;
     }
 
     &:hover, &:focus-within {
@@ -176,7 +181,86 @@ input {
 }
 
 .input-wrapper {
-    & input-inner-syle {
-        
+    & .style {
+        width: 31.46%;
     }
+
+    & .cover-picture {
+        width: 68,54%;
+    }
+}
+
+.input-inner-style {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    position: relative;
+
+    & input, 
+    & input:focus,
+    & input:hover {
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    & label {
+        margin-bottom: 0;
+
+    }
+
+    & img {
+        width: 64px;
+        height: 32px;
+    }
+}
+
+.input-inner-droparea {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    
+
+    & div {
+        display: flex;
+        border-radius: .5rem;
+        background-color: var(--shape-button);
+        
+        position: relative;
+    }
+
+    & .droparea {
+        position: absolute;  
+        width: 100%;
+        height: 100%;
+        inset: 0; 
+        opacity: 0; 
+    }
+
+    & img {
+        height: 1rem;
+    }
+
+    & label {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+        margin-bottom: 0;
+
+        height: 2.5rem;
+        padding: .25rem 0.75rem;
+    }
+
+    & span {
+        font: 400 1rem/normal var(--open-sans);
+        color: var(--input-placeholder);
+    }
+}
+
+.error {
+    color: var(--danger);
+    display: flex;
+    gap: .5rem;
+    margin-top: .5rem;
 }
