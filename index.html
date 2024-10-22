@@ -218,7 +218,7 @@
                 <div class="style">
                   <label>Estilo</label>
                   <div class="input-inner-style">
-                    <input type="radio" name="light-theme" id="escuro">
+                    <input type="checkbox" name="light-theme" id="escuro">
                     <img src="./assets/icons/switch-toggle.svg" alt="">
                     <label for="escuro">Escuro</label>
                   </div>
@@ -241,7 +241,44 @@
 
             <fieldset class="contact-info">
               <legend><img src="./assets/icons/contact.svg" alt="">Dados para contato</legend>
+
+              <label for="nome">Nome</label>
+              <input type="text" name="nome" id="nome" placeholder="Nome completo" required>
+              <span class="error"><img src="./assets/icons/circle-alert.svg" alt="">Campo Obrigatório</span>
+
+              <div class="input-wrapper">
+                <div class="input-inner email">
+                  <label for="email">E-mail</label>
+                  <input type="text" name="email" id="email" placeholder="exemplo@email.com">
+                </div>
+                
+                <div class="input-inner telefone">
+                  <label for="telefone">Telefone</label>
+                  <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999">
+                </div>
+              </div>
             </fieldset>
+
+            <div class="checkbox-wrapper">
+              <div class="checkbox-inner terms">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="terms" id="terms" required>
+                <label for="terms">Li e concordo com os <span class="link">Termos e Condições</span> e com a <span class="link">Política de Privacidade</span></label>
+              </div>
+
+              <div class="checkbox-inner emailUpdates">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="emailUpdates" id="emailUpdates" required>
+                <label>Aceito receber atualizações e promoções por e-mail.</label>
+              </div>
+
+              <div class="checkbox-inner smsUpdates">
+                <div class="checkbox-image"></div>
+                <input type="checkbox" name="smsUpdates" id="smsUpdates" required>
+                <label>Aceito receber atualizações e promoções por SMS.</label>
+              </div>
+              
+            </div>
           </form>
         </div>
       </main>

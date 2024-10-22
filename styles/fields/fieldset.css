@@ -1,0 +1,5 @@
+fieldset.contact-info {
+    border-bottom: 1px solid var(--input-stroke);
+    padding-bottom: 3rem;
+    margin-bottom: 2.5rem;
+}
